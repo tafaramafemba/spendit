@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
 belongs_to :user
-has_many :transactions
+has_many :payments
 validates :name, presence: true
 
 # after_destroy :delete_comments_counter
@@ -14,6 +14,5 @@ validates :name, presence: true
 #   category.decrement!(:comments_counter)
 def recent_categories
   posts.order(created_at: :desc)
-end
 end
 end

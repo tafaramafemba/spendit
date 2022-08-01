@@ -2,7 +2,7 @@
 
 <hr />
 
-<%= form_with model: @category, url: categories_path(@category), local: true, method: :post, scope: :category do |f| %>
+<%= form_with model: @category, url: user_categories_path, local: true, method: :post, scope: :category do |f| %>
             <%= f.text_field :name, placeholder: "Name", rows: "8", required: true %>
             <%= f.submit "Create ", class: 'button' %>
 <% end %>
