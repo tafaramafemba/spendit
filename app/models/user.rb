@@ -6,4 +6,8 @@ class User < ApplicationRecord
 has_many :categories
 has_many :transactions
 validates :name, presence: true
+
+def admin?(requested_role)
+  role == requested_role.to_s
+end
 end
