@@ -1,6 +1,7 @@
 class Category < ApplicationRecord
+has_one_attached :image
 belongs_to :user
-has_many :payments
+has_many :payments, dependent: :delete_all
 validates :name, presence: true
 
 # after_destroy :delete_comments_counter
@@ -12,7 +13,7 @@ validates :name, presence: true
 
 # def delete_categories_counter
 #   category.decrement!(:comments_counter)
-def recent_categories
-  posts.order(created_at: :desc)
+def payment_total
+  payments.sum(:amount)
 end
 end
