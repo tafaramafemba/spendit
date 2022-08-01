@@ -1,9 +1,8 @@
 <% @categories.each do |f|%>
+<%= link_to  "View Category", user_category_path(f) %>
 <%= f.name %>
 <%= group_avatar(f.image) %>
 <%= f.created_at.strftime('%d %b %Y') %>
-
-
 <% end %>
 
 <%= link_to "Add Category", new_user_category_path %>
