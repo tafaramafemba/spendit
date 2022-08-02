@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root :to => 'categories#index'
-  devise_for :users
+  root :to => 'home#index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   
   resources :users do
-    resources :categories, only: [:index, :new, :show, :create, :destroy] do
+    resources :categories do
       resources :payments, only: [:index, :new, :show, :create, :destroy]
     end
     

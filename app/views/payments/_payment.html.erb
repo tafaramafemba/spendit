@@ -1,0 +1,20 @@
+<div class="payments">
+  <hr>
+  <% if current_user.payments.any? %>
+    <% current_user.payments.each do |payment| %>
+      <div>
+        <div>
+          <p>
+            <b><%= payment.name %></b>
+          </p>
+          <p class="payments">
+            <%= payment.amount %>
+          </p>
+        </div>
+      </div>
+        <%= button_to "Delete", user_category_payment_path(payment.category_id, payment), method: :delete %>
+    <% end %>
+  <% else %>
+    <p class="payments">No payments to display.</p>
+  <% end %>
+</div>

@@ -1,8 +1,21 @@
 <% @categories.each do |f|%>
-<%= link_to  "View Category", user_category_path(f) %>
-<%= f.name %>
-<%= group_avatar(f.image) %>
-<%= f.created_at.strftime('%d %b %Y') %>
+  <%= link_to user_category_path(current_user, f) do %>
+
+    <div class="case">
+      <div>
+        <div><%= group_avatar(f.image) %></div>
+      </div>
+      <div class="name">
+        <p><%= f.name %></p>
+        <p><%= f.created_at.strftime('%d %b %Y') %></p>
+
+      </div>
+    <div>
+
+  <% end %>
 <% end %>
 
-<%= link_to "Add Category", new_user_category_path %>
+
+
+<%= link_to "Add Category", new_user_category_path, class: "button" %>
+

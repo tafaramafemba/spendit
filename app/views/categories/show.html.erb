@@ -1,4 +1,9 @@
-        <div>
-            <h4><%= @categories.name %></h4>
-            <p>by <%= @category.created_at.strftime('%d %b %Y') %></p>
-        </div>
+<div>
+    <h4><%= @categories.name %></h4>
+    <p><%= @categories.created_at.strftime('%d %b %Y') %></p>
+    <p><%= group_avatar(@categories.image) %></p>
+</div>
+
+<%= render partial: "payments/payment", locals: { payments: @payments } %>
+
+<%= link_to "Add Payment", new_user_category_payment_path(current_user, @categories)%>

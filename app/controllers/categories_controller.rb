@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource  
   def index
     @categories = Category.all
   end
@@ -16,6 +17,12 @@ class CategoriesController < ApplicationController
       flash[:alert] = 'Category not saved'
     end
     redirect_to user_categories_path
+  end
+
+  def show
+    @categories = Category.find(params[:id])
+    @payments = Payment.where(category_id: @categories).where(user_id: current_user)
+
   end
 
   def destroy
