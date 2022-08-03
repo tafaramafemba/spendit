@@ -1,8 +1,9 @@
 <div>
-    <h4><%= @categories.name %></h4>
+    <h4><%= @categories.name %> $<%= @categories.payment_total %></h4>
     <p><%= @categories.created_at.strftime('%d %b %Y') %></p>
     <p><%= group_avatar(@categories.image) %></p>
 </div>
+
 
 <%= render partial: "payments/payment", locals: { payments: @payments } %>
 
