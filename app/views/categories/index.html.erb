@@ -1,14 +1,12 @@
 <% @categories.each do |f|%>
-  <%= link_to user_category_path(current_user, f) do %>
+  <%= link_to user_category_path(current_user, f), class: "link" do %>
 
     <div class="case">
-      <div>
-        <div><%= group_avatar(f.image) %></div>
-      </div>
+    <p><%= group_avatar(f.image) %></p>
       <div class="name">
-        <p><%= f.name %></p>
+        <p><%= f.name %> $<%= f.payment_total %></p>
+        <p>Transactions:<%= f.total_payments %></p>
         <p><%= f.created_at.strftime('%d %b %Y') %></p>
-
       </div>
     <div>
 

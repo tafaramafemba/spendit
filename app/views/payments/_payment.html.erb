@@ -1,7 +1,7 @@
 <div class="payments">
   <hr>
   <% if current_user.payments.any? %>
-    <% current_user.payments.each do |payment| %>
+    <% @payments.each do |payment| %>
       <div>
         <div>
           <p>

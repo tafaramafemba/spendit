@@ -46,7 +46,6 @@ gem "image_processing", ">= 1.2"
 # gem "sassc-rails"
 gem 'ffi', '~> 1.15.5'
 gem 'devise'
-gem 'cancancan'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
