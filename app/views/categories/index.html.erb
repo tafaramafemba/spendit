@@ -1,17 +1,33 @@
-<% @categories.each do |f|%>
-  <%= link_to user_category_path(current_user, f), class: "link" do %>
+<div class="case">
+  <% @categories.each do |f|%>
+    <%= link_to user_category_path(current_user, f), class: "link" do %>
 
-    <div class="case">
-    <p><%= group_avatar(f.image) %></p>
-      <div class="name">
-        <p><%= f.name %> $<%= f.payment_total %></p>
-        <p>Transactions:<%= f.total_payments %></p>
-        <p><%= f.created_at.strftime('%d %b %Y') %></p>
-      </div>
-    <div>
 
+      <ul class="category-list">
+        <li class="list-item">
+          <div class="fill"><%= group_avatar(f.image) %></div>
+          <div class="cat-container">
+            <div class="fill">
+              
+                  <div class="name-container">
+                    <div class="fill"> <%= f.name %> </div>
+                    <div class="fill">$<%= f.payment_total %></div>
+                  </div>
+                
+            </div>
+            
+            <div class="pay-and-date">
+              <p class="list-item-pay">Transactions: <%= f.total_payments %></p>
+              <p class="list-item-it"><%= f.created_at.strftime('%d %b %Y') %></p>
+            <div>
+          </div>
+        </li>
+      </ul>
+
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
 
 
 
