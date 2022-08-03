@@ -29,6 +29,11 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
+    if @category.destroy
+      flash[:notice] = 'Category removed successfully'
+    else
+      flash[:alert] = 'Category not removed'
+    end
     redirect_to user_categories_path
   end
 

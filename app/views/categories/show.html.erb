@@ -16,6 +16,7 @@
               <p class="list-item-it"><%= @categories.created_at.strftime('%d %b %Y') %></p>
             <div>
           </div>
+          <b><%= button_to "Delete", user_category_path, class: "del-btn fill", method: :delete %></b>
         </li>
 </ul>
 
