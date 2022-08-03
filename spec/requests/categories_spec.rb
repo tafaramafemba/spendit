@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Categories", type: :request do
+RSpec.describe 'Categories', type: :request do
   before(:example) do
     @user = User.new(name: 'Thomas', email: 'thomas@thomas.com', password: 'emilythinksimcool',
                      password_confirmation: 'emilythinksimcool', id: 1)

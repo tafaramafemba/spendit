@@ -1,5 +1,4 @@
 class PaymentsController < ApplicationController
-
   def index
     @category = Category.find(params[:id])
     @payments = Payment.where(user_id: user.id).where(category_id: params[:category_id])
@@ -23,7 +22,7 @@ class PaymentsController < ApplicationController
       flash[:alert] = 'Payment not saved'
     end
     redirect_to user_categories_path
-  end 
+  end
 
   def destroy
     @payment = Payment.find(params[:category_id])
@@ -36,9 +35,7 @@ class PaymentsController < ApplicationController
       flash[:alert] = 'Payment not removed'
     end
     redirect_to user_categories_path
-
   end
-  
 
   private
 

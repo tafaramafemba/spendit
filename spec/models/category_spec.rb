@@ -5,7 +5,7 @@ RSpec.describe Category, type: :model do
     @file = fixture_file_upload('SpendIt.png', 'image/png')
     @user = User.new(name: 'Tafara', email: 'tafara@gmail.com')
     @category = Category.new(name: 'Fast Food', image: @file, user_id: @user.id)
-    @category.payments.new(name: 'Apple Pie', amount: 5, user_id: @user.id, user_id: @category.id)
+    @category.payments.new(name: 'Apple Pie', amount: 5, user_id: @user.id, category_id: @category.id)
   end
 
   describe 'category validation tests' do
