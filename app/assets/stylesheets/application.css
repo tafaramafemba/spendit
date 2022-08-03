@@ -326,3 +326,9 @@ a {
 .imegi {
   background: #fff;
 }
+
+.back {
+  background: #3778c2;
+  color: #fff;
+  font-size: 20px;
+}

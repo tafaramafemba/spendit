@@ -1,7 +1,9 @@
 <div class="header">
   <div class="header__icon">
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-arrow-left icon" ></i>
+  <%- if controller_name != 'home' %>
+      <%= link_to root_path do %>
+      <p class="back"><</p>
+    <% end %>
     <% end %>
   </div>
   <div class="header__title">
