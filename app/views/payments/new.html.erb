@@ -1,17 +1,13 @@
 <h1>New Payment</h1>
 
-<hr />
-
 <%= form_with model: @payment, url: user_category_payments_path, local: true, method: :post, scope: :payment do |f| %>
  
   <div>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "Name", rows: "8", required: true %>
+    <%= f.text_field :name, placeholder: "Name", rows: "8", required: true, class: "text_field", placeholder: "Name" %>
   <div>
 
   <div>
-    <%= f.label :amount %>
-    <%= f.text_field :amount, required: true %>
+    <%= f.text_field :amount, required: true, class: "text_field", placeholder: "amount" %>
   </div>
             <%= f.submit "Create ", class: 'button' %>
 <% end %>

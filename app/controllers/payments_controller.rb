@@ -1,6 +1,4 @@
 class PaymentsController < ApplicationController
-  before_action :set_category, only: %i[new create edit update destroy]
-  before_action :set_payment, only: %i[edit update destroy]
 
   def index
     @category = Category.find(params[:id])
