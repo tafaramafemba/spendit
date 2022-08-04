@@ -6,14 +6,14 @@ class PaymentsController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:user_id])
+    @category = Category.find(params[:category_id])
     @payment = Payment.new
   end
 
   def create
     @payment = current_user.payments.new(payment_params)
     p @payment
-    @category = Category.find(params[:user_id])
+    @category = Category.find(params[:category_id])
     @payment.category_id = params[:category_id]
 
     if @payment.save
