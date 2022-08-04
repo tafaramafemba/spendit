@@ -1,21 +1,21 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # protected
 
-  # def after_sign_up_path_for(resource_name)
-  #   flash[:notice] =
-  #     'A message with a confirmation link has been sent to your email address.
-  #     Please follow the link to activate your account.'
-  #   session_path(resource_name)
-  # end
+  def after_sign_up_path_for(resource_name)
+    flash[:notice] =
+      'A message with a confirmation link has been sent to your email address.
+      Please follow the link to activate your account.'
+    session_path(resource_name)
+  end
 
-  # def after_inactive_sign_up_path_for(resource_name)
-  #   flash[:notice] =
-  #     'A message with a confirmation link has been sent to your email address.
-  #     Please follow the link to activate your account.'
-  #   session_path(resource_name)
-  # end
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  def after_inactive_sign_up_path_for(resource_name)
+    flash[:notice] =
+      'A message with a confirmation link has been sent to your email address.
+      Please follow the link to activate your account.'
+    session_path(resource_name)
+  end
+  before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
