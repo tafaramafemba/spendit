@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '3b56f162cd2038c3608f60b3f208fb72ca5e47eceb5d3c739742991e232e96c70ff27e812f2004606dc3119da524bf22236a19eac07aac3e24d801345b8fb550'
+  # config.secret_key = 'b3ecef2d53795fe60b436a2aed20fb10d69b6911b94c8653bf92a6f649330825f590e8d37efeb1415f8037f4f8efa668dc66515447b6040a32da7823cf4ca8e5'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,13 +24,13 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'tafara.maf@gmail.com'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.
-  # config.parent_mailer = 'ActionMailer::Base'
+  config.parent_mailer = 'ActionMailer::Base'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'ea9a873498ec3a9f6ab56ed981c901d54a3fc5db00e2ad5d67e5afe667443cef5e9c1e6e36386d956e9d381337a78a3f75aff31b627f75ad226c67607ba6f732'
+  # config.pepper = '33db18ecd0a3ef42995880dfee6bb7e7d75211ea64eeefbaeb9782e2b47c997c1655826a5b6f0f96e54b029e09659e7952092a0bab245377e1541358a11d0d90'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -266,7 +266,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
