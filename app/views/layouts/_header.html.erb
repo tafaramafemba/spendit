@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="header__icon">
+  <%- if controller_name != 'home' %>
+      <%= link_to root_path do %>
+      <p class="back"><</p>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="header__title">
+    <%- if controller_name == 'sessions' %>
+      <h2 class="title">LOGIN</h2>
+    <% end %>
+    <%- if controller_name == 'categories' %>
+      <h2 class="title">CATEGORIES</h2>
+    <% end %>
+    <%- if controller_name == 'home' %>
+      <h2 class="title">HOME</h2>
+    <% end %>
+    <%- if controller_name == 'payments' %>
+      <h2 class="title">PAYMENTS</h2>
+    <% end %>
+  </div>
+  <div class="header__nav" >
+  <header class="header-bar">
+              <ul class="nav-menu">
+                  <li class="nav-item">
+                      <a class="nav-link"><%= link_to "Home", root_path(current_user) %></a>
+                  </li>
+                   <%- if user_signed_in? %>
+                       <li class="nav-item">
+                      <a class="nav-link"><%= link_to "Categories", user_categories_path(current_user) %></a>
+                      </li>
+                    <% end %>
+              </ul>
+              <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar three"></span>
+              </div>
+  </header>
+  </div>
+</div>

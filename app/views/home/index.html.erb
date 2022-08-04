@@ -1,0 +1,17 @@
+<div class = "spendit-img"><%= image_tag('SpendIt.png') %></div>
+  <div>
+  </div>
+  <div class="login-container">
+    <ul class="login-bar">
+      <% if user_signed_in? %>
+        <li>
+          <%= button_to "LOG OUT", destroy_user_session_path, class: "sign-out-btn", method: :delete %>
+        </li>
+      <% else %>
+        <li>
+          <%= button_to "LOG IN", new_user_session_path, class: "sign-in-btn" %>
+          <%= link_to "SIGN UP", new_user_registration_path, class: "sign-btn" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>

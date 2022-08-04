@@ -1,15 +1,334 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+* {
+  font-family: 'proxima-nova', sans-serif;
+  background: #f8f4f4;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+.button {
+  text-decoration: none;
+  width: 95%;
+  background: #5fb523;
+  border: solid 1px #5fb523;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-left: 2px;
+}
+
+.sign-out-btn {
+  width: 100%;
+  background: #f8f4f4;
+  border: solid 1px #f8f4f4;
+  color: #434b54;
+  font-size: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.sign-btn {
+  width: 95%;
+  background: #f8f4f4;
+  border: solid 1px #f8f4f4;
+  text-decoration: none;
+  color: #434b54;
+  font-size: 20px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in-btn {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 95%;
+  background: #3778c2;
+  border: solid 1px #3778c2;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.resend-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #3778c2;
+  border: solid 1px #3778c2;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.login-bar {
+  text-decoration: none;
+  list-style: none;
+  align-self: center;
+  margin: auto;
+  padding-left: 0;
+}
+
+.spendit-img {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.text_field {
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  border-bottom: 1px solid #434b54;
+  border-top: 1px solid #434b54;
+  padding: 5px;
+  width: 95%;
+  font-size: 15px;
+}
+
+.log-link {
+  text-decoration: none;
+  color: #434b54;
+  display: flex;
+  justify-content: center;
+}
+
+.rem-field {
+  margin-bottom: 20px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px;
+  list-style: none;
+  gap: 20px;
+  background: #fff;
+  padding-top: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+  width: 65vw;
+  padding-top: 12px;
+  background: #fff;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  width: 65vw;
+  padding-top: 12px;
+}
+
+.payment-det {
+  font-size: 20px;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: lighter;
+}
+
+.namee {
+  margin-top: 0;
+}
+
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+
+.list-item-it {
+  font-size: 12px;
+  margin-top: 0;
+  background: #fff;
+}
+
+.list-item-pay {
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.pay-and-date {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+img {
+  margin-right: 10px;
+  background: #fff;
+}
+
+.fill {
+  background: #fff;
+}
+
+.head {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.file {
+  margin-top: 10px;
+}
+
+.show {
+  display: flex;
+}
+
+.del-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 20vw;
+  background: #3778c2;
+  border: solid 1px #3778c2;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: 'proxima-nova', sans-serif;
+  color: #fff;
+}
+
+.title {
+  background: #3778c2;
+}
+
+.header_nav {
+  background: #3778c2;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.three {
+  margin-bottom: 0;
+}
+
+.nav-menu {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: -150%;
+  top: 60px;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: #3778c2;
+  margin: 0;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+a {
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+}
+
+.imegi {
+  background: #fff;
+}
+
+.back {
+  background: #3778c2;
+  color: #fff;
+  font-size: 20px;
+}

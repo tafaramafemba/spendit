@@ -1,0 +1,35 @@
+<div class="case">
+  <% @categories.each do |f|%>
+    <%= link_to user_category_path(current_user, f), class: "link" do %>
+
+
+      <ul class="category-list">
+        <li class="list-item">
+          <div class="fill"><%= group_avatar(f.image) %></div>
+          <div class="cat-container">
+            <div class="fill">
+              
+                  <div class="name-container">
+                    <div class="fill head"> <%= f.name %> </div>
+                    <div class="fill">$<%= f.payment_total %></div>
+                  </div>
+                
+            </div>
+            
+            <div class="pay-and-date">
+              <p class="list-item-pay">Transactions: <%= f.total_payments %></p>
+              <p class="list-item-it"><%= f.created_at.strftime('%d %b %Y') %></p>
+            <div>
+          </div>
+        </li>
+      </ul>
+
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+<%= link_to "Add Category", new_user_category_path, class: "button" %>
+

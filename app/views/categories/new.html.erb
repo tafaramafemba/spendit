@@ -1,0 +1,12 @@
+<h1>New Category</h1>
+
+<%= form_with model: @category, url: user_categories_path, local: true, method: :post, scope: :category do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: "Name", class: "text_field", rows: "8", required: true %>
+  <div>
+            
+  <div>
+    <p class="file"><%= f.file_field :image %></p>
+  </div>
+            <%= f.submit "Create ", class: 'button' %>
+<% end %>
